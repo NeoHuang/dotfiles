@@ -130,7 +130,8 @@ nnoremap <leader>ft Vatzf
 " paste external text
 nnoremap <leader>p "*p
 " copy to clip
-nnoremap <leader>y "*y
+vnoremap <leader>y "*y
+nnoremap <leader>y V"*y
 " select last pasted text
 nnoremap <leader>v V`]
 " movements between window
