@@ -100,7 +100,6 @@ set colorcolumn=85
 set number
 
 let mapleader=","
-let NERDTreeShowHidden=1
 
 inoremap {	{}<Left>
 inoremap {<CR>	{<CR>}<Esc>O
