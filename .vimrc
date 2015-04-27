@@ -40,6 +40,7 @@ NeoBundle 'AndrewRadev/writable_search.vim' " search and replace across multiple
 NeoBundle 'idbrii/vim-mark'                 " highlight different words
 NeoBundle 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
 NeoBundle 'haya14busa/incsearch.vim'        " highlight all incsearch matches
+NeoBundle 'majutsushi/tagbar'               " tagbar shows definition
 
 " language support
 NeoBundle 'b4winckler/vim-objc'           " objective c
