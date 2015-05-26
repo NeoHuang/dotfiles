@@ -41,6 +41,7 @@ NeoBundle 'idbrii/vim-mark'                 " highlight different words
 NeoBundle 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
 NeoBundle 'haya14busa/incsearch.vim'        " highlight all incsearch matches
 NeoBundle 'majutsushi/tagbar'               " tagbar shows definition
+NeoBundle 'scrooloose/nerdtree'               " tagbar shows definition
 
 " language support
 NeoBundle 'b4winckler/vim-objc'           " objective c
@@ -80,7 +81,6 @@ if has("win32")
 else
   set fileencoding=utf-8
 endif
-execute pathogen#infect()
 syntax on
 set number
 filetype on
