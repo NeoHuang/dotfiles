@@ -140,10 +140,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-if has('nvim')
-    NeoBundle 'Valloric/YouCompleteMe', {'build':{'mac':'./install.sh'}}
-    let g:tmuxcomplete#trigger = 'omnifunc'
-endif
+NeoBundle 'Valloric/YouCompleteMe'
+let g:tmuxcomplete#trigger = 'omnifunc'
 
 call neobundle#end()
 
