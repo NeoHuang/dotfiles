@@ -114,6 +114,11 @@ inoremap [	[]<Left>
 inoremap [<CR>	[<CR>]<Esc>O
 inoremap [[	[
 inoremap [] []
+" for mac, change tagbar bin
+if has("unix")
+  let g:tagbar_ctags_bin= '/usr/bin/ctags'
+  let g:tagbar_width=26
+endif
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F10> :NERDTree<CR>
@@ -153,7 +158,7 @@ function! Startup()
   if has("gui_running")
     " GUI is running or is about to start.
     " Maximize gvim window.
-    set lines=999 columns=999
+    set lines=999 columns=9999
   endif
   if 0 == argc()
     NERDTree
