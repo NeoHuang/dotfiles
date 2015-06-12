@@ -154,7 +154,8 @@ colorscheme hybrid
 command! -nargs=1 Gos call GoSearchFn(<f-args>)
 
 function! GoSearchFn(text)
-  silent execute "grep -Fi '" . a:text . "' **/*.go"
+  silent execute "grep -Fi " . a:text . " **/*.go"
+  redraw!
   cw
 endfunction
 
