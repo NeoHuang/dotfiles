@@ -95,7 +95,6 @@ set nobackup
 set noswapfile
 set ignorecase
 set smartcase
-set hlsearch
 set textwidth=79
 set colorcolumn=85
 set number
