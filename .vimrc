@@ -1,4 +1,4 @@
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+﻿set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -115,7 +115,6 @@ inoremap [<CR>	[<CR>]<Esc>O
 inoremap [[	[
 inoremap [] []
 let g:tagbar_ctags_bin= '/usr/local/bin/ctags'
-let g:tagbar_width=26
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F10> :NERDTree<CR>
@@ -141,7 +140,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
+" search current selected text
+vnoremap // y/<C-R>"<CR>
 NeoBundle 'Valloric/YouCompleteMe'
 let g:tmuxcomplete#trigger = 'omnifunc'
 
@@ -150,6 +150,14 @@ call neobundle#end()
 NeoBundleCheck
 
 colorscheme hybrid
+
+" commands
+command! -nargs=1 Gos call GoSearchFn(<f-args>)
+
+function! GoSearchFn(text)
+  silent execute "grep -Fi '" . a:text . "' **/*.go"
+  cw
+endfunction
 
 function! Startup()
   if has("gui_running")
