@@ -139,6 +139,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" split window
+map ß :split<CR>
+map ˇ :vsplit<CR>
+" quick resize window
+map - <C-W>-
+map + <C-W>+
+" quick resize verticle window
+map <leader>< <C-w><
+map <leader>> <C-w>>
 " search current selected text
 vnoremap // y/<C-R>"<CR>
 NeoBundle 'Valloric/YouCompleteMe'
