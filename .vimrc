@@ -114,6 +114,7 @@ inoremap [<CR>	[<CR>]<Esc>O
 inoremap [[	[
 inoremap [] []
 let g:tagbar_ctags_bin= '/usr/local/bin/ctags'
+nmap <F5> :GoTest<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F10> :NERDTree<CR>
