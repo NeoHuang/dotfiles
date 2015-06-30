@@ -42,6 +42,7 @@ NeoBundle 'wellle/vim-visual-star-search'   " search for visual selection (resto
 NeoBundle 'haya14busa/incsearch.vim'        " highlight all incsearch matches
 NeoBundle 'majutsushi/tagbar'               " tagbar shows definition
 NeoBundle 'scrooloose/nerdtree'               " tagbar shows definition
+NeoBundle 'Valloric/YouCompleteMe'
 
 " language support
 NeoBundle 'b4winckler/vim-objc'           " objective c
@@ -147,10 +148,12 @@ map ˇ :vsplit<CR>
 map - <C-W>-
 map + <C-W>+
 " quick resize verticle window
-map <leader>< <C-w><
-map <leader>> <C-w>>
+map <leader>< <C-w>5<
+map <leader>> <C-w>5>
 " search current selected text
 vnoremap // y/<C-R>"<CR>
+" map shortcut to discard uncommitted change
+nmap <buffer> U :Git checkout -- <C-r><C-g><CR>
 " go related setting
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -162,8 +165,8 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
-NeoBundle 'Valloric/YouCompleteMe'
 let g:tmuxcomplete#trigger = 'omnifunc'
+set diffopt=vertical
 
 call neobundle#end()
 
@@ -195,9 +198,9 @@ function! Startup()
     " Maximize gvim window.
     set lines=999 columns=9999
   endif
-  if 0 == argc()
-    NERDTree
-  endif
+  " if 0 == argc()
+  "  NERDTree
+  " endif
 endfunction
 
 
