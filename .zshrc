@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+bindkey -v
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcam="git commit -am"
@@ -83,5 +84,7 @@ alias gaa= "git add -A"
 alias gph="git push origin HEAD"
 alias gs="git status"
 alias glgg="git log --graph"
-alias got="go test"
+alias grlg="git reflog"
 alias gcob="git checkout -b"
+alias got="go test"
+alias gotf="go test -gocheck.f"

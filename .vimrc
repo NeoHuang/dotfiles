@@ -131,6 +131,9 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>ft Vatzf
 " paste external text
 nnoremap <leader>p "*p
+vnoremap <leader>p "*p
+" replace current word with paste buffer
+nnoremap <leader>w viw"0p
 " copy to clip
 vnoremap <leader>y "*y
 nnoremap <leader>y V"*y
