@@ -139,6 +139,10 @@ vnoremap <leader>y "*y
 nnoremap <leader>y V"*y
 " select last pasted text
 nnoremap <leader>v V`]
+" exchnage lines
+nnoremap <leader>x ddp
+" exchnage lines with above
+nnoremap <leader>X ddkP
 " movements between window
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

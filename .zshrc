@@ -77,6 +77,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcam="git commit -am"
@@ -86,5 +87,10 @@ alias gs="git status"
 alias glgg="git log --graph"
 alias grlg="git reflog"
 alias gcob="git checkout -b"
+alias gco-="git checkout -"
+alias gcom="git checkout master"
 alias got="go test"
 alias gotf="go test -gocheck.f"
+alias gcomps="gco master; gl; gco -"
+alias gcomp="gco master; gl"
+alias gcompb="gco master; gl; gcob "
