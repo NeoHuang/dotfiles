@@ -70,9 +70,6 @@ set langmenu=en
 if has("multi_byte")
   set encoding=utf-8
   set fileencoding=utf-8
-  set bomb
-  set termencoding=utf-8
-  set fileencodings=utf-8,chinese,latin1
 else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
@@ -82,7 +79,6 @@ if has("win32")
 else
   set fileencoding=utf-8
 endif
-syntax on
 set number
 filetype on
 filetype plugin on
@@ -119,6 +115,7 @@ nmap <F5> :GoTest<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F10> :NERDTree<CR>
+nmap Q :NERDTree<CR>
 
 nnoremap gp `[v`]
 " move up in screen line
