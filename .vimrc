@@ -166,11 +166,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " split window
-map ß :split<CR>
-map ˇ :vsplit<CR>
+map - :split<CR>
+map ! :vsplit<CR>
 " quick resize window
-map - <C-W>-
-map + <C-W>+
+" map - <C-W>-
+" map + <C-W>+
 " quick resize verticle window
 map <leader>< <C-w>5<
 map <leader>> <C-w>5>
