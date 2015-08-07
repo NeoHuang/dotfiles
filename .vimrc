@@ -1,72 +1,87 @@
-﻿set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+﻿set nocompatible              " be iMproved, required
+filetype off                  " required
 
-NeoBundle 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak'}}
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak'}}
 
 " TODO: get rid of vim-sensible
-NeoBundle 'tpope/vim-sensible'        " sane general defaults
-NeoBundle 'tpope/vim-repeat'          " makes some plugins repeatable
-NeoBundle 'tpope/vim-abolish'         " I mostly use :S for smart replace
-NeoBundle 'tpope/vim-fugitive'        " git stuff, mostly :Gblame
-NeoBundle 'tpope/vim-surround'        " add and change braces and quotes
-NeoBundle 'tpope/vim-unimpaired'      " list navigation, option toggling
-NeoBundle 'tpope/vim-commentary'      " motion to comment out ranges
-NeoBundle 'tpope/vim-sleuth'          " automatic indentation settings
-NeoBundle 'tpope/vim-dispatch'        " run commands in background
-NeoBundle 'tpope/vim-speeddating.git' " increment dates and times
-NeoBundle 'tpope/vim-tbone'           " interact with tmux panes
-NeoBundle 'idanarye/vim-merginal'     " work with git branches
+Plugin 'tpope/vim-sensible'        " sane general defaults
+Plugin 'tpope/vim-repeat'          " makes some plugins repeatable
+Plugin 'tpope/vim-abolish'         " I mostly use :S for smart replace
+Plugin 'tpope/vim-fugitive'        " git stuff, mostly :Gblame
+Plugin 'tpope/vim-surround'        " add and change braces and quotes
+Plugin 'tpope/vim-unimpaired'      " list navigation, option toggling
+Plugin 'tpope/vim-commentary'      " motion to comment out ranges
+Plugin 'tpope/vim-sleuth'          " automatic indentation settings
+Plugin 'tpope/vim-dispatch'        " run commands in background
+Plugin 'tpope/vim-speeddating.git' " increment dates and times
+Plugin 'tpope/vim-tbone'           " interact with tmux panes
+Plugin 'idanarye/vim-merginal'     " work with git branches
 
-NeoBundle 'coderifous/textobj-word-column.vim' " work on columns
-NeoBundle 'michaeljsmith/vim-indent-object'    " work same indentation
-NeoBundle 'jeetsukumaran/vim-indentwise'       " move by indentation
+Plugin 'coderifous/textobj-word-column.vim' " work on columns
+Plugin 'michaeljsmith/vim-indent-object'    " work same indentation
+Plugin 'jeetsukumaran/vim-indentwise'       " move by indentation
 
-NeoBundle 'ntpeters/vim-better-whitespace'  " show and fix trailing space
-NeoBundle 'nelstrom/vim-qargs'              " populate args with quickfix files
-NeoBundle 'osyo-manga/vim-over'             " interactive substitution
-NeoBundle 'AndrewRadev/linediff.vim'        " diff blocks of lines
-" NeoBundle 'vim-scripts/diffchar.vim'        " show diffs character by character (messes with unimpaired maps)
-NeoBundle 'rking/ag.vim'                    " search in local files :Ag
-NeoBundle 'kien/ctrlp.vim'                  " fuzzy find files
-NeoBundle 'tommcdo/vim-lion'                " align operator glip'
-NeoBundle 'tommcdo/vim-exchange'            " operator to exchange text
-NeoBundle 'tommcdo/vim-ninja-feet'          " operate to ends of text objects
-NeoBundle 'bruno-/vim-vertical-move'        " move up and down in same column
-NeoBundle 'epeli/slimux'                    " interact with tmux panes
-NeoBundle 'airblade/vim-gitgutter'          " show git changes with signs
-NeoBundle 'kshenoy/vim-signature'           " show and navigate marks
-NeoBundle 'AndrewRadev/writable_search.vim' " search and replace across multiple files
-NeoBundle 'idbrii/vim-mark'                 " highlight different words
-NeoBundle 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
-NeoBundle 'haya14busa/incsearch.vim'        " highlight all incsearch matches
-NeoBundle 'majutsushi/tagbar'               " tagbar shows definition
-NeoBundle 'scrooloose/nerdtree'               " tagbar shows definition
-NeoBundle 'Valloric/YouCompleteMe'
+Plugin 'ntpeters/vim-better-whitespace'  " show and fix trailing space
+Plugin 'nelstrom/vim-qargs'              " populate args with quickfix files
+Plugin 'osyo-manga/vim-over'             " interactive substitution
+Plugin 'AndrewRadev/linediff.vim'        " diff blocks of lines
+" Plugin 'vim-scripts/diffchar.vim'        " show diffs character by character (messes with unimpaired maps)
+Plugin 'rking/ag.vim'                    " search in local files :Ag
+Plugin 'kien/ctrlp.vim'                  " fuzzy find files
+Plugin 'tommcdo/vim-lion'                " align operator glip'
+Plugin 'tommcdo/vim-exchange'            " operator to exchange text
+Plugin 'tommcdo/vim-ninja-feet'          " operate to ends of text objects
+Plugin 'bruno-/vim-vertical-move'        " move up and down in same column
+Plugin 'epeli/slimux'                    " interact with tmux panes
+Plugin 'airblade/vim-gitgutter'          " show git changes with signs
+Plugin 'kshenoy/vim-signature'           " show and navigate marks
+Plugin 'AndrewRadev/writable_search.vim' " search and replace across multiple files
+Plugin 'idbrii/vim-mark'                 " highlight different words
+Plugin 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
+Plugin 'haya14busa/incsearch.vim'        " highlight all incsearch matches
+Plugin 'majutsushi/tagbar'               " tagbar shows definition
+Plugin 'scrooloose/nerdtree'               " tagbar shows definition
+Plugin 'Valloric/YouCompleteMe'
 
 " language support
-NeoBundle 'b4winckler/vim-objc'           " objective c
-NeoBundle 'vim-scripts/javacomplete'      " java
-NeoBundle 'kana/vim-filetype-haskell'     " haskell
-NeoBundle 'tpope/vim-markdown'            " markdown
-NeoBundle 'fatih/vim-go'                  " go
-NeoBundle 'exu/pgsql.vim'                 " postgres syntax highlighting
-NeoBundle 'wellle/vim-simpledb'           " sql repl (switch mappings)
+Plugin 'b4winckler/vim-objc'           " objective c
+Plugin 'vim-scripts/javacomplete'      " java
+Plugin 'kana/vim-filetype-haskell'     " haskell
+Plugin 'tpope/vim-markdown'            " markdown
+Plugin 'fatih/vim-go'                  " go
+Plugin 'exu/pgsql.vim'                 " postgres syntax highlighting
+Plugin 'wellle/vim-simpledb'           " sql repl (switch mappings)
 
 " color schemes
-NeoBundle 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'vim-scripts/Colour-Sampler-Pack'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'wellle/vim-colors-solarized'
-NeoBundle 'mtglsk/mushroom'
-NeoBundle 'wellsjo/wells-colorscheme.vim'
-NeoBundle 'ajgrf/sprinkles'
-NeoBundle 'vim-scripts/random.vim' " pseudo colorscheme to pick random one
-NeoBundle 'wellle/targets.vim'       " advanced text objects
-NeoBundle 'wellle/tmux-complete.vim' " complete words from panes
-NeoBundle 'wellle/grapple.vim'       " yank without moving
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/Colour-Sampler-Pack'
+Plugin 'chriskempson/base16-vim'
+Plugin 'wellle/vim-colors-solarized'
+Plugin 'mtglsk/mushroom'
+Plugin 'wellsjo/wells-colorscheme.vim'
+Plugin 'ajgrf/sprinkles'
+Plugin 'vim-scripts/random.vim' " pseudo colorscheme to pick random one
+Plugin 'neohuang/neo-hybrid' "custom hybrid scheme
+
+Plugin 'wellle/targets.vim'       " advanced text objects
+Plugin 'wellle/tmux-complete.vim' " complete words from panes
+Plugin 'wellle/grapple.vim'       " yank without moving
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 set langmenu=en
+
 if has("multi_byte")
   set encoding=utf-8
   set fileencoding=utf-8
@@ -177,11 +192,7 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 let g:tmuxcomplete#trigger = 'omnifunc'
 set diffopt=vertical
 
-call neobundle#end()
-
-NeoBundleCheck
-
-colorscheme hybrid
+colorscheme neo-hybrid
 
 " commands
 command! -nargs=1 Gos call GoSearchFn(<f-args>)
