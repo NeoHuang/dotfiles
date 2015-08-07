@@ -97,6 +97,11 @@ set colorcolumn=85
 set number
 
 let mapleader=","
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 inoremap {	{}<Left>
 inoremap {<CR>	{<CR>}<Esc>O
