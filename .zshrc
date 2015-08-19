@@ -77,7 +77,17 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 bindkey -v
-bindkey '^R' history-incremental-search-backward
+bindkey -M viins '^a' beginning-of-line
+bindkey -M viins '^e' end-of-line
+bindkey -M viins '^h' backward-delete-char
+bindkey -M viins '^k' kill-line
+bindkey -M viins '^n' down-history
+bindkey -M viins '^p' up-history
+bindkey -M viins "^r" history-incremental-pattern-search-backward
+bindkey -M viins "^s" history-incremental-pattern-search-forward
+bindkey -M viins '^u' backward-kill-line
+bindkey -M viins '^w' backward-delete-word
+bindkey -M viins '^y' yank
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcam="git commit -am"
@@ -97,3 +107,5 @@ alias gcompb="gco master; gl; gcob "
 alias grbi="grb -i"
 alias grbf="grb -i HEAD~2"
 alias gphF="gph --force-with-lease"
+alias gx="git ls-files --unmerged | cut -f2 | uniq"
+alias grsv="gx | xargs mvim"

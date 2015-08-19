@@ -160,6 +160,8 @@ nnoremap <leader>v V`]
 nnoremap <leader>x ddp
 " exchnage lines with above
 nnoremap <leader>X ddkP
+" git add current file
+nnoremap <leader>ga :Git add %<CR>
 " movements between window
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -189,6 +191,10 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
+" go test in right pane
+nnoremap <silent> <leader>gt :w<CR>:call tbone#send_keys('right', "<C-V><C-C><C-V><C-L>got<C-V><CR>")<CR>
+" rerun previous command in right pane
+nnoremap <silent> <leader>cp :w<CR>:call tbone#send_keys('right', "<C-V><C-C><C-V><C-L><C-V><C-P><C-V><CR>")<CR>
 let g:tmuxcomplete#trigger = 'omnifunc'
 set diffopt=vertical
 
