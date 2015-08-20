@@ -155,13 +155,13 @@ nnoremap <leader>w viw"0p
 vnoremap <leader>y "*y
 nnoremap <leader>y V"*y
 " select last pasted text
-nnoremap <leader>v V`]
+" nnoremap <leader>v V`]
 " exchnage lines
 nnoremap <leader>x ddp
 " exchnage lines with above
 nnoremap <leader>X ddkP
 " git add current file
-nnoremap <leader>ga :Git add %<CR>
+nnoremap <silent> <leader>ga :Git add %<CR>
 " movements between window
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -191,6 +191,7 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>vf /func <CR>Nf{V%
 " go test in right pane
 nnoremap <silent> <leader>gt :w<CR>:call tbone#send_keys('right', "<C-V><C-C><C-V><C-L>got<C-V><CR>")<CR>
 " rerun previous command in right pane
