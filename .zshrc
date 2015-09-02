@@ -88,26 +88,34 @@ bindkey -M viins "^s" history-incremental-pattern-search-forward
 bindkey -M viins '^u' backward-kill-line
 bindkey -M viins '^w' backward-delete-word
 bindkey -M viins '^y' yank
+
+# git
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcam="git commit -am"
+alias ga.='g add .'
 alias gaa= "git add -A"
-alias gph="git push origin HEAD"
-alias gs="git status"
-alias gsh="git show"
-alias glgg="git log --graph"
-alias grlg="git reflog"
+alias gbc='g rev-parse --abbrev-ref head | tr -d "\n" | pbcopy'
 alias gcob="git checkout -b"
 alias gco-="git checkout -"
 alias gcom="git checkout master"
-alias got="go test"
-alias gotf="go test -gocheck.f"
 alias gcomp-="gco master; gl; gco -"
 alias gcomp="gco master; gl"
 alias gcompb="gco master; gl; gcob "
+alias gdm="gd origin/master..HEAD"
+alias gla="git log --oneline --graph --decorate --all"
+alias glgg="git log --graph"
 alias grbi="grb -i"
 alias grbf="grb -i HEAD~2"
+alias grlg="git reflog"
 alias gphF="gph --force-with-lease"
-alias gx="git ls-files --unmerged | cut -f2 | uniq"
+alias gph="git push origin HEAD"
+alias gpu="git push --set-upstream origin HEAD"
 alias grsv="gx | xargs mvim"
-alias gdm="gd origin/master..HEAD"
+alias gs="git status"
+alias gsh="git show"
+alias gx="git ls-files --unmerged | cut -f2 | uniq"
+
+#go
+alias got="go test"
+alias gotf="go test -gocheck.f"

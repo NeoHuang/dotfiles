@@ -10,3 +10,4 @@ brew install zsh-completions
 brew install the_silver_searcher
 brew install node
 brew install reattach-to-user-namespace
+brew install graphviz
