@@ -76,6 +76,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+#
+PERL_MM_OPT="INSTALL_BASE=/Users/zhiyihuang/perl5"; export PERL_MM_OPT;
+
 bindkey -v
 bindkey -M viins '^a' beginning-of-line
 bindkey -M viins '^e' end-of-line

@@ -25,6 +25,7 @@ Plugin 'tpope/vim-dispatch'        " run commands in background
 Plugin 'tpope/vim-speeddating.git' " increment dates and times
 Plugin 'tpope/vim-tbone'           " interact with tmux panes
 Plugin 'idanarye/vim-merginal'     " work with git branches
+Plugin 'raimondi/delimitMate'      " closing of quotes, parenthesis, brackets, etc.
 
 Plugin 'coderifous/textobj-word-column.vim' " work on columns
 Plugin 'michaeljsmith/vim-indent-object'    " work same indentation
@@ -118,18 +119,18 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-inoremap {	{}<Left>
-inoremap {<CR>	{<CR>}<Esc>O
-inoremap {{	{
-inoremap {}	{}
-inoremap (	()<Left>
-inoremap (<CR>	(<CR>)<Esc>O
-inoremap ((	(
-inoremap ()	()
-inoremap [	[]<Left>
-inoremap [<CR>	[<CR>]<Esc>O
-inoremap [[	[
-inoremap [] []
+" inoremap {	{}<Left>
+" inoremap {<CR>	{<CR>}<Esc>O
+" inoremap {{	{
+" inoremap {}	{}
+" inoremap (	()<Left>
+" inoremap (<CR>	(<CR>)<Esc>O
+" inoremap ((	(
+" inoremap ()	()
+" inoremap [	[]<Left>
+" inoremap [<CR>	[<CR>]<Esc>O
+" inoremap [[	[
+" inoremap [] []
 let g:tagbar_ctags_bin= '/usr/local/bin/ctags'
 nmap <F5> :GoTest<CR>
 nmap <F8> :TagbarToggle<CR>
