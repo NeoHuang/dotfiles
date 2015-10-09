@@ -50,6 +50,7 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export BACKEND="/Users/zhiyihuang/workspace/go/src/github.com/adjust/backend"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,7 +84,6 @@ bindkey -v
 bindkey -M viins '^a' beginning-of-line
 bindkey -M viins '^e' end-of-line
 bindkey -M viins '^h' backward-delete-char
-bindkey -M viins '^k' kill-line
 bindkey -M viins '^n' down-history
 bindkey -M viins '^p' up-history
 bindkey -M viins "^r" history-incremental-pattern-search-backward
@@ -91,6 +91,8 @@ bindkey -M viins "^s" history-incremental-pattern-search-forward
 bindkey -M viins '^u' backward-kill-line
 bindkey -M viins '^w' backward-delete-word
 bindkey -M viins '^y' yank
+bindkey -M viins '^j' backward-word
+bindkey -M viins '^k' forward-word
 
 # git
 alias zshconfig="mate ~/.zshrc"
@@ -112,6 +114,7 @@ alias glgg="git log --graph"
 alias grbi="grb -i"
 alias grbf="grb -i HEAD~2"
 alias grlg="git reflog"
+alias gbu="gb -u"
 alias gphF="gph --force-with-lease"
 alias gph="git push origin HEAD"
 alias gpu="git push --set-upstream origin HEAD"

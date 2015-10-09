@@ -78,6 +78,9 @@ Plugin 'wellle/targets.vim'       " advanced text objects
 Plugin 'wellle/tmux-complete.vim' " complete words from panes
 Plugin 'wellle/grapple.vim'       " yank without moving
 
+" not important
+Plugin 'ashisha/image.vim' " open image with vim
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -222,6 +225,11 @@ function! Startup()
   " endif
 endfunction
 
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif
 
 autocmd VimEnter * call Startup()
 
