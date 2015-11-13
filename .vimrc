@@ -135,11 +135,16 @@ let g:go_highlight_build_constraints = 1
 " inoremap [[	[
 " inoremap [] []
 let g:tagbar_ctags_bin= '/usr/local/bin/ctags'
-nmap <F5> :GoTest<CR>
-nmap <F8> :TagbarToggle<CR>
-nmap <F9> :NERDTreeToggle<CR>
-nmap <F10> :NERDTree<CR>
-nmap Q :NERDTree<CR>
+nnoremap <F5> :GoTest<CR>
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F9> :NERDTreeToggle<CR>
+nnoremap <F10> :NERDTree<CR>
+nnoremap Q :NERDTree<CR>
+nnoremap L $
+nnoremap H ^
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+inoremap jk <esc>
 
 nnoremap gp `[v`]
 " move up in screen line
@@ -182,8 +187,6 @@ map <leader>< <C-w>5<
 map <leader>> <C-w>5>
 " search current selected text
 vnoremap // y/<C-R>"<CR>
-" map shortcut to discard uncommitted change
-nmap <buffer> U :Git checkout -- <C-r><C-g><CR>
 " go related setting
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -196,6 +199,7 @@ au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>vf /func <CR>Nf{V%
+au FileType go nmap <Leader>df yafO<esc>P
 " go test in right pane
 nnoremap <silent> <leader>gt :w<CR>:call tbone#send_keys('right', "<C-V><C-C><C-V><C-L>got<C-V><CR>")<CR>
 " rerun previous command in right pane
@@ -232,5 +236,8 @@ if has('persistent_undo')      "check if your vim version supports it
 endif
 
 autocmd VimEnter * call Startup()
-
+augroup filetype_go
+  autocmd!
+  autocmd BufWritePre *.go :GoImports
+augroup END
 
