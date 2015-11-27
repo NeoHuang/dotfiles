@@ -198,6 +198,7 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
+" copy function
 au FileType go nmap <Leader>df yafO<esc>P
 " go test in right pane
 nnoremap <silent> <leader>gt :w<CR>:call tbone#send_keys('right', "<C-V><C-C><C-V><C-L>got<C-V><CR>")<CR>

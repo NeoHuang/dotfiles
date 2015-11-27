@@ -95,32 +95,31 @@ bindkey -M viins '^j' backward-word
 bindkey -M viins '^k' forward-word
 
 # git
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gcam="git commit -am"
 alias ga.='g add .'
-alias gaa= "git add -A"
+alias gaa="git add -A"
 alias gbc='g rev-parse --abbrev-ref head | tr -d "\n" | pbcopy'
 alias gcob="git checkout -b"
 alias gco-="git checkout -"
 alias gcom="git checkout master"
-alias gcomp-="gco master; gl; gco -"
-alias gcomp="gco master; gl"
-alias gcompb="gco master; gl; gcob "
+alias gcomp-="gco master && gl && gco -"
+alias gcomp="gco master && gl"
+alias gcompb="gco master && gl && gcob"
 alias gcm="gc -m"
 alias gdm="gd origin/master..HEAD"
 alias gdmno="gdm --name-only"
 alias gds="gd --staged"
 alias gla="git log --oneline --graph --decorate --all"
 alias glgg="git log --graph"
-alias grbi="grb -i"
 alias grbim="grbi master"
+alias grbom="gcomp- && grbm"
 alias grbf="gcam f;grb -i HEAD~2"
 alias grlg="git reflog"
 alias gbu="gb -u"
 alias gphF="gph --force-with-lease"
-alias gph="git push origin HEAD"
-alias gpu="git push --set-upstream origin HEAD"
+alias gph="gcomp- && grb && git push --set-upstream origin HEAD"
 alias grsv="gx | xargs mvim"
 alias gs="git status"
 alias gsh="git show"
@@ -129,3 +128,5 @@ alias gx="git ls-files --unmerged | cut -f2 | uniq"
 #go
 alias got="go test"
 alias gotf="go test -gocheck.f"
+
+alias myip='ifconfig | grep "192\.[0-9]*\.[0-9]*\.[0-9]*"'
