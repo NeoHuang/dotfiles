@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/zhiyihuang/.oh-my-zsh
 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -94,9 +95,12 @@ bindkey -M viins '^y' yank
 bindkey -M viins '^j' backward-word
 bindkey -M viins '^k' forward-word
 
-# git
+# shell
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias so="source"
+
+# git
 alias gcam="git commit -am"
 alias ga.='g add .'
 alias gaa="git add -A"
@@ -117,9 +121,12 @@ alias grbim="grbi master"
 alias grbom="gcomp- && grbm"
 alias grbf="gcam f;grb -i HEAD~2"
 alias grlg="git reflog"
+alias grst="git reset"
 alias gbu="gb -u"
 alias gphF="gph --force-with-lease"
-alias gph="gcomp- && grb && git push --set-upstream origin HEAD"
+alias gph="git push --set-upstream origin HEAD"
+alias grph="gcomp- && grbm && git push --set-upstream origin HEAD"
+alias grphF="grph --force-with-lease"
 alias grsv="gx | xargs mvim"
 alias gs="git status"
 alias gsh="git show"
@@ -130,3 +137,8 @@ alias got="go test"
 alias gotf="go test -gocheck.f"
 
 alias myip='ifconfig | grep "192\.[0-9]*\.[0-9]*\.[0-9]*"'
+
+#ruby
+alias rake='noglob rake'
+# rbenv
+eval "$(rbenv init -)"
