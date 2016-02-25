@@ -81,24 +81,14 @@ source $ZSH/oh-my-zsh.sh
 #
 PERL_MM_OPT="INSTALL_BASE=/Users/zhiyihuang/perl5"; export PERL_MM_OPT;
 
-bindkey -v
-bindkey -M viins '^a' beginning-of-line
-bindkey -M viins '^e' end-of-line
-bindkey -M viins '^h' backward-delete-char
-bindkey -M viins '^n' down-history
-bindkey -M viins '^p' up-history
-bindkey -M viins "^r" history-incremental-pattern-search-backward
-bindkey -M viins "^s" history-incremental-pattern-search-forward
-bindkey -M viins '^u' backward-kill-line
-bindkey -M viins '^w' backward-delete-word
-bindkey -M viins '^y' yank
-bindkey -M viins '^j' backward-word
-bindkey -M viins '^k' forward-word
-
 # shell
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias so="source"
+alias :q="exit"
+
+# android studio
+alias adb="~/Library/Android/sdk/platform-tools/adb"
 
 # git
 alias gcam="git commit -am"
@@ -119,7 +109,7 @@ alias gla="git log --oneline --graph --decorate --all"
 alias glgg="git log --graph"
 alias grbim="grbi master"
 alias grbom="gcomp- && grbm"
-alias grbf="gcam f;grb -i HEAD~2"
+alias grbf="gca --fixup HEAD;grb -i HEAD~2"
 alias grlg="git reflog"
 alias grst="git reset"
 alias gbu="gb -u"

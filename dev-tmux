@@ -1,0 +1,7 @@
+#!/bin/sh
+tmux new-session -d -s "work"
+tmux new-session -d -s "storage"
+tmux new-session -d -s "backend"
+tmux new-session -d -s "long-task"
+tmux attach-session -t "work"
+

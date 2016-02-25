@@ -61,6 +61,7 @@ Plugin 'tpope/vim-markdown'            " markdown
 Plugin 'fatih/vim-go'                  " go
 Plugin 'exu/pgsql.vim'                 " postgres syntax highlighting
 Plugin 'wellle/vim-simpledb'           " sql repl (switch mappings)
+Plugin 'vim-scripts/Vim-R-plugin'      " R
 
 " color schemes
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
