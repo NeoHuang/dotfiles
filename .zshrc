@@ -98,6 +98,7 @@ alias gbc='g rev-parse --abbrev-ref head | tr -d "\n" | pbcopy'
 alias gcob="git checkout -b"
 alias gco-="git checkout -"
 alias gcom="git checkout master"
+alias gcomb="git checkout master && gcob"
 alias gcomp-="gco master && gl && gco -"
 alias gcomp="gco master && gl"
 alias gcompb="gco master && gl && gcob"
