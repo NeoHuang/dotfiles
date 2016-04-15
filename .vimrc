@@ -199,6 +199,7 @@ au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>a <Plug>(go-alternate-edit)
 " copy function
 au FileType go nmap <Leader>df yafO<esc>P
 " go test in right pane
