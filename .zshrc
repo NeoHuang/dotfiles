@@ -133,3 +133,5 @@ alias myip='ifconfig | grep "192\.[0-9]*\.[0-9]*\.[0-9]*"'
 alias rake='noglob rake'
 # rbenv
 eval "$(rbenv init -)"
+
+ulimit -n 512
