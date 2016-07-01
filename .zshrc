@@ -92,6 +92,7 @@ alias adb="~/Library/Android/sdk/platform-tools/adb"
 
 # git
 alias gcam="git commit -am"
+alias gcamf="git commit -am fix"
 alias ga.='g add .'
 alias gaa="git add -A"
 alias gbc='g rev-parse --abbrev-ref head | tr -d "\n" | pbcopy'
@@ -112,7 +113,8 @@ alias grbim="grbi master"
 alias grbom="gcomp- && grbm"
 alias grbf="gca --fixup HEAD;grb -i HEAD~2"
 alias grlg="git reflog"
-alias grst="git reset"
+alias grs="git reset"
+alias grsl="git reset head~1"
 alias gbu="gb -u"
 alias gphF="gph --force-with-lease"
 alias gph="git push --set-upstream origin HEAD"
@@ -135,3 +137,5 @@ alias rake='noglob rake'
 eval "$(rbenv init -)"
 
 ulimit -n 512
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

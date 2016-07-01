@@ -122,6 +122,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " inoremap {	{}<Left>
 " inoremap {<CR>	{<CR>}<Esc>O
@@ -170,6 +172,8 @@ nnoremap <leader>y V"*y
 nnoremap <leader>x ddp
 " exchnage lines with above
 nnoremap <leader>X ddkP
+" show which function I am in
+map <leader>I ma[["xyy`a:echo @x<CR>
 " git add current file
 nnoremap <silent> <leader>ga :Git add %<CR>
 " movements between window
