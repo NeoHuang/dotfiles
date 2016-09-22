@@ -50,7 +50,7 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/zhiyihuang/workspace/protoc-3.0.0-osx-x86_64/bin/:/Users/zhiyihuang/workspace/go/bin"
 export BACKEND="/Users/zhiyihuang/workspace/go/src/github.com/adjust/backend"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -109,6 +109,7 @@ alias gdmno="gdm --name-only"
 alias gds="gd --staged"
 alias gla="git log --oneline --graph --decorate --all"
 alias glgg="git log --graph"
+alias glgl="glgg --pretty=oneline"
 alias grbim="grbi master"
 alias grbom="gcomp- && grbm"
 alias grbf="gca --fixup HEAD;grb -i HEAD~2"
@@ -129,7 +130,7 @@ alias gx="git ls-files --unmerged | cut -f2 | uniq"
 alias got="go test"
 alias gotf="go test -gocheck.f"
 
-alias myip='ifconfig | grep "192\.[0-9]*\.[0-9]*\.[0-9]*"'
+alias myip='ifconfig | grep "1[7,9]2\.[0-9]*\.[0-9]*\.[0-9]*"'
 
 #ruby
 alias rake='noglob rake'

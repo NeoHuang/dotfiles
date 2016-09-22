@@ -147,7 +147,6 @@ nnoremap L $
 nnoremap H ^
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-inoremap jk <esc>
 
 nnoremap gp `[v`]
 " move up in screen line
