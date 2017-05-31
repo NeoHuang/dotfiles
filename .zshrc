@@ -92,9 +92,10 @@ alias adb="~/Library/Android/sdk/platform-tools/adb"
 
 # git
 alias gcam="git commit -am"
-alias gcamf="git commit -am fix"
+alias gcamf="git commit --amend --all --no-edit"
 alias ga.='g add .'
 alias gaa="git add -A"
+alias gap="git add --patch"
 alias gbc='g rev-parse --abbrev-ref head | tr -d "\n" | pbcopy'
 alias gcob="git checkout -b"
 alias gco-="git checkout -"
@@ -103,6 +104,7 @@ alias gcomb="git checkout master && gcob"
 alias gcomp-="gco master && gl && gco -"
 alias gcomp="gco master && gl"
 alias gcompb="gco master && gl && gcob"
+alias gcaf="gca --fixup"
 alias gcm="gc -m"
 alias gdm="gd origin/master..HEAD"
 alias gdmno="gdm --name-only"
@@ -123,7 +125,9 @@ alias grph="gcomp- && grbm && git push --set-upstream origin HEAD"
 alias grphF="grph --force-with-lease"
 alias grsv="gx | xargs mvim"
 alias gs="git status"
+alias gsp="git status --porcelain"
 alias gsh="git show"
+alias gshs="git show --stat"
 alias gx="git ls-files --unmerged | cut -f2 | uniq"
 
 #go
@@ -137,6 +141,9 @@ alias rake='noglob rake'
 # rbenv
 eval "$(rbenv init -)"
 
-ulimit -n 512
+ulimit -n 1024
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -54,6 +54,7 @@ Plugin 'scrooloose/nerdtree'               " tagbar shows definition
 Plugin 'Valloric/YouCompleteMe'
 
 " language support
+Plugin 'neomake/neomake'               "linting
 Plugin 'b4winckler/vim-objc'           " objective c
 Plugin 'vim-scripts/javacomplete'      " java
 Plugin 'kana/vim-filetype-haskell'     " haskell
