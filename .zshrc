@@ -50,7 +50,7 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/zhiyihuang/workspace/protoc-3.0.0-osx-x86_64/bin/:/Users/zhiyihuang/workspace/go/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Users/zhiyihuang/workspace/protoc-3.0.0-osx-x86_64/bin/:/Users/zhiyihuang/workspace/go/bin"
 export BACKEND="/Users/zhiyihuang/workspace/go/src/github.com/adjust/backend"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -92,3 +92,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export EDITOR="vim"

@@ -63,6 +63,7 @@ Plugin 'fatih/vim-go'                  " go
 Plugin 'exu/pgsql.vim'                 " postgres syntax highlighting
 Plugin 'wellle/vim-simpledb'           " sql repl (switch mappings)
 Plugin 'vim-scripts/Vim-R-plugin'      " R
+Plugin 'ekalinin/Dockerfile.vim'       " docker
 
 " color schemes
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
@@ -126,6 +127,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+let g:go_test_show_name = 0
 
 " inoremap {	{}<Left>
 " inoremap {<CR>	{<CR>}<Esc>O
@@ -248,3 +250,5 @@ augroup filetype_go
   autocmd BufWritePre *.go :GoImports
 augroup END
 
+" Change directory to current open file
+" autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
