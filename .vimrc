@@ -82,7 +82,7 @@ Plugin 'wellle/tmux-complete.vim' " complete words from panes
 Plugin 'wellle/grapple.vim'       " yank without moving
 
 " not important
-Plugin 'ashisha/image.vim' " open image with vim
+" Plugin 'ashisha/image.vim' " open image with vim
 Plugin 'johngrib/vim-game-code-break'
 
 " All of your Plugins must be added before the following line
