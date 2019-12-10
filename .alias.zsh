@@ -53,6 +53,7 @@ alias got="go test"
 alias gotf="go test -gocheck.f"
 alias gola="go list ./... | grep -v vendor"
 alias gota="gola | xargs go test"
+alias gotr="go test --run"
 
 alias myip='ifconfig | grep "1[7,9]2\.[0-9]*\.[0-9]*\.[0-9]*"'
 

@@ -46,7 +46,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -91,5 +91,17 @@ ulimit -n 1024
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.rvm/bin:/usr/include"
 export EDITOR="vim"
+
+export AWS_REGION=eu-central-1
+export KOPS_CLUSTER_NAME=neohuang.k8s.local
+export KOPS_STATE_STORE=s3://kops-state-store.neohuang.com
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/zhiyihuang/workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/zhiyihuang/workspace/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/zhiyihuang/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/zhiyihuang/workspace/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/go@1.12/bin:$PATH"
+export GO111MODULE=auto

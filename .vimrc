@@ -8,6 +8,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+" PluginInstall to install
+" PluginUpdate
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak'}}
@@ -48,6 +50,7 @@ Plugin 'kshenoy/vim-signature'           " show and navigate marks
 Plugin 'AndrewRadev/writable_search.vim' " search and replace across multiple files
 Plugin 'idbrii/vim-mark'                 " highlight different words
 Plugin 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
+Plugin 'wellle/context.vim'              " show the context of the current visible buffer
 Plugin 'haya14busa/incsearch.vim'        " highlight all incsearch matches
 Plugin 'majutsushi/tagbar'               " tagbar shows definition
 Plugin 'scrooloose/nerdtree'               " tagbar shows definition
@@ -252,3 +255,8 @@ augroup END
 
 " Change directory to current open file
 " autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
+"
+
+" abbreviates
+" search for partner module WritePair
+ab checkP WritePair(\(.*Ph\)\@!\("\w\+", "\w\+"\)\@!
