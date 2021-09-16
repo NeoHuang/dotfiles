@@ -39,18 +39,19 @@ Plugin 'osyo-manga/vim-over'             " interactive substitution
 Plugin 'AndrewRadev/linediff.vim'        " diff blocks of lines
 " Plugin 'vim-scripts/diffchar.vim'        " show diffs character by character (messes with unimpaired maps)
 Plugin 'rking/ag.vim'                    " search in local files :Ag
-Plugin 'kien/ctrlp.vim'                  " fuzzy find files
+" Plugin 'kien/ctrlp.vim'                  " fuzzy find files
+Plugin 'junegunn/fzf'
 Plugin 'tommcdo/vim-lion'                " align operator glip'
 Plugin 'tommcdo/vim-exchange'            " operator to exchange text
 Plugin 'tommcdo/vim-ninja-feet'          " operate to ends of text objects
 Plugin 'bruno-/vim-vertical-move'        " move up and down in same column
-Plugin 'epeli/slimux'                    " interact with tmux panes
+" Plugin 'epeli/slimux'                    " interact with tmux panes
 Plugin 'airblade/vim-gitgutter'          " show git changes with signs
 Plugin 'kshenoy/vim-signature'           " show and navigate marks
 Plugin 'AndrewRadev/writable_search.vim' " search and replace across multiple files
 Plugin 'idbrii/vim-mark'                 " highlight different words
 Plugin 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
-Plugin 'wellle/context.vim'              " show the context of the current visible buffer
+" Plugin 'wellle/context.vim'              " show the context of the current visible buffer
 Plugin 'haya14busa/incsearch.vim'        " highlight all incsearch matches
 Plugin 'majutsushi/tagbar'               " tagbar shows definition
 Plugin 'scrooloose/nerdtree'               " tagbar shows definition
@@ -84,9 +85,14 @@ Plugin 'wellle/targets.vim'       " advanced text objects
 Plugin 'wellle/tmux-complete.vim' " complete words from panes
 Plugin 'wellle/grapple.vim'       " yank without moving
 
+" helm k8s cloud
+Plugin 'towolf/vim-helm' " helm syntax
+
 " not important
 " Plugin 'ashisha/image.vim' " open image with vim
 Plugin 'johngrib/vim-game-code-break'
+
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -198,6 +204,7 @@ map <leader>< <C-w>5<
 map <leader>> <C-w>5>
 " search current selected text
 vnoremap // y/<C-R>"<CR>
+nmap <C-P> :FZF<CR>
 " go related setting
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)

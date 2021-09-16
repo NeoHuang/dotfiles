@@ -90,6 +90,11 @@ ulimit -n 1024
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export ANDROID_HOME=$HOME/Library/Android/sdk/
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# add android env
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:/usr/include"
 export EDITOR="vim"
@@ -103,5 +108,8 @@ if [ -f '/Users/zhiyihuang/workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/zhiyihuang/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/zhiyihuang/workspace/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/go@1.12/bin:$PATH"
 export GO111MODULE=auto
+
+
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export KUBECONFIG=~/.kube/config:~/.kube/adjust-config
