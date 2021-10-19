@@ -137,6 +137,7 @@ let g:go_highlight_build_constraints = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:go_test_show_name = 0
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 " inoremap {	{}<Left>
 " inoremap {<CR>	{<CR>}<Esc>O
