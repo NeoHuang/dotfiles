@@ -49,7 +49,6 @@ Plugin 'bruno-/vim-vertical-move'        " move up and down in same column
 Plugin 'airblade/vim-gitgutter'          " show git changes with signs
 Plugin 'kshenoy/vim-signature'           " show and navigate marks
 Plugin 'AndrewRadev/writable_search.vim' " search and replace across multiple files
-Plugin 'idbrii/vim-mark'                 " highlight different words
 Plugin 'wellle/vim-visual-star-search'   " search for visual selection (restore register)
 " Plugin 'wellle/context.vim'              " show the context of the current visible buffer
 Plugin 'haya14busa/incsearch.vim'        " highlight all incsearch matches
@@ -68,6 +67,29 @@ Plugin 'exu/pgsql.vim'                 " postgres syntax highlighting
 Plugin 'wellle/vim-simpledb'           " sql repl (switch mappings)
 Plugin 'vim-scripts/Vim-R-plugin'      " R
 Plugin 'ekalinin/Dockerfile.vim'       " docker
+Plugin 'ngmy/vim-rubocop'              " ruby
+Plugin 'tpope/vim-rails'               " ruby on rails
+Plugin 'thoughtbot/vim-rspec'          " ruby rspec testing framework
+Plugin 'uarun/vim-protobuf'            " protobuff
+Plugin 'eslint/eslint'
+
+" ALE
+Plugin 'w0rp/ale'
+" Plugin 'vim-airline/vim-airline'
+" Set specific linters
+let g:ale_linters = {
+\   'ruby':['rubocop'],
+\   'javascript':['eslint'],
+\}
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+let g:ale_fixers = {
+      \ 'ruby':['rubocop'],
+      \ 'javascript':['eslint'],
+      \}
+let g:ale_fix_on_save = 1
+" let g:airline#extensions#ale#enabled = 1
+
 
 " color schemes
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
@@ -87,6 +109,8 @@ Plugin 'wellle/grapple.vim'       " yank without moving
 
 " helm k8s cloud
 Plugin 'towolf/vim-helm' " helm syntax
+" terraform
+Plugin 'hashivim/vim-terraform'
 
 " not important
 " Plugin 'ashisha/image.vim' " open image with vim
@@ -231,6 +255,7 @@ colorscheme neo-hybrid
 
 " commands
 command! -nargs=1 Gos call GoSearchFn(<f-args>)
+command! -bang -nargs=1 -complete=file Agi call ag#Ag('grep<bang>',"<args> --ignore=\"*test*\" --ignore=\"*spec*\" --ignore=\"*mock*\" --ignore=\"*.log\"")
 
 function! GoSearchFn(text)
   silent execute "grep -Fi " . a:text . " **/*.go"
@@ -268,3 +293,4 @@ augroup END
 " abbreviates
 " search for partner module WritePair
 ab checkP WritePair(\(.*Ph\)\@!\("\w\+", "\w\+"\)\@!
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
